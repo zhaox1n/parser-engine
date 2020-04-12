@@ -16,6 +16,7 @@ public class DatabaseTest extends ParserDefault {
                 "create database `12``3`",
                 "CREATE DATABASE test",
                 "create database if not exists xxx",
+                "/** 20180417 **/ create database if not exists xxx",
         };
         for (String sql : sqls) {
             run(sql);

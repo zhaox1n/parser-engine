@@ -52,7 +52,6 @@ public enum VisitorRule {
      */
     public static VisitorRule valueOf(final Class<? extends ParseTree> parseTreeClass) {
         String parseTreeClassName = parseTreeClass.getSimpleName();
-        System.out.println(parseTreeClassName);
         for (VisitorRule each : VisitorRule.values()) {
             if (each.getContextName().equals(parseTreeClassName)) {
                 return each;
