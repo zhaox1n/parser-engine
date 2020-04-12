@@ -19,6 +19,7 @@ package org.github.zhaox1n.parser.mysql.visitor.impl;
 
 import org.github.zhaox1n.parser.api.ASTNode;
 import org.github.zhaox1n.parser.api.visitor.statement.TCLVisitor;
+import org.github.zhaox1n.parser.autogen.MySQLStatementParser.*;
 import org.github.zhaox1n.parser.mysql.visitor.MySQLVisitor;
 import org.github.zhaox1n.parser.segment.tcl.AutoCommitSegment;
 import org.github.zhaox1n.parser.statement.tcl.*;

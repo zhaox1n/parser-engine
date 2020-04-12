@@ -14,14 +14,14 @@ public class DatabaseTest extends ParserDefault {
                 //"create database 123test",
                 //"create database `123`",
                 //"create database `12``3`",
-                "CREATE DATABASE test",
+                /*"CREATE DATABASE test",
                 "create database if exists xxx",
                 "create database if not exists xxx",
                 "create database xxx encryption = 'N'",
                 "create database xxx encryption 'N'",
                 "create database xxx default encryption = 'N'",
                 "create database xxx encryption 'Y'",
-                "create database xxx default encryption = 'Y'"
+                "create database xxx default encryption = 'Y'"*/
         };
         for (String sql : sqls) {
             run(sql);

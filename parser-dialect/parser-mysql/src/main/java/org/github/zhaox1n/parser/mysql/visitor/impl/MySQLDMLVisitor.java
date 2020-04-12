@@ -20,6 +20,7 @@ package org.github.zhaox1n.parser.mysql.visitor.impl;
 import org.github.zhaox1n.parser.api.ASTNode;
 import org.github.zhaox1n.parser.api.visitor.statement.DMLVisitor;
 import org.github.zhaox1n.parser.autogen.MySQLStatementParser;
+import org.github.zhaox1n.parser.autogen.MySQLStatementParser.*;
 import org.github.zhaox1n.parser.mysql.visitor.MySQLVisitor;
 import org.github.zhaox1n.parser.segment.dml.JoinSpecificationSegment;
 import org.github.zhaox1n.parser.segment.dml.JoinedTableSegment;

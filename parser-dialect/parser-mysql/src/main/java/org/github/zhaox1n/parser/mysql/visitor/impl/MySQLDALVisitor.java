@@ -19,6 +19,7 @@ package org.github.zhaox1n.parser.mysql.visitor.impl;
 
 import org.github.zhaox1n.parser.api.ASTNode;
 import org.github.zhaox1n.parser.api.visitor.statement.DALVisitor;
+import org.github.zhaox1n.parser.autogen.MySQLStatementParser.*;
 import org.github.zhaox1n.parser.mysql.visitor.MySQLVisitor;
 import org.github.zhaox1n.parser.segment.dal.FromSchemaSegment;
 import org.github.zhaox1n.parser.segment.dal.FromTableSegment;

@@ -17,8 +17,11 @@
 
 package org.github.zhaox1n.parser.mysql.visitor.impl;
 
+import com.google.common.base.Preconditions;
+import org.antlr.v4.runtime.Token;
 import org.github.zhaox1n.parser.api.ASTNode;
 import org.github.zhaox1n.parser.api.visitor.statement.DDLVisitor;
+import org.github.zhaox1n.parser.autogen.MySQLStatementParser.*;
 import org.github.zhaox1n.parser.mysql.visitor.MySQLVisitor;
 import org.github.zhaox1n.parser.segment.ddl.AlterDefinitionSegment;
 import org.github.zhaox1n.parser.segment.ddl.CreateDefinitionSegment;
@@ -38,8 +41,6 @@ import org.github.zhaox1n.parser.segment.generic.database.SimpleDatabaseSegment;
 import org.github.zhaox1n.parser.segment.generic.table.SimpleTableSegment;
 import org.github.zhaox1n.parser.statement.ddl.*;
 import org.github.zhaox1n.parser.value.collection.CollectionValue;
-import com.google.common.base.Preconditions;
-import org.antlr.v4.runtime.Token;
 
 import java.util.Collection;
 import java.util.Collections;

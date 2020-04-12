@@ -17,8 +17,13 @@
 
 package org.github.zhaox1n.parser.mysql.visitor;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.tree.TerminalNode;
 import org.github.zhaox1n.parser.api.ASTNode;
 import org.github.zhaox1n.parser.autogen.MySQLStatementBaseVisitor;
+import org.github.zhaox1n.parser.autogen.MySQLStatementParser.*;
 import org.github.zhaox1n.parser.constant.AggregationType;
 import org.github.zhaox1n.parser.constant.OrderDirection;
 import org.github.zhaox1n.parser.predicate.PredicateBuilder;
@@ -57,10 +62,6 @@ import org.github.zhaox1n.parser.value.literal.impl.NumberLiteralValue;
 import org.github.zhaox1n.parser.value.literal.impl.OtherLiteralValue;
 import org.github.zhaox1n.parser.value.literal.impl.StringLiteralValue;
 import org.github.zhaox1n.parser.value.parametermarker.ParameterMarkerValue;
-import lombok.AccessLevel;
-import lombok.Getter;
-import org.antlr.v4.runtime.ParserRuleContext;
-import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.Collection;
 import java.util.Collections;
