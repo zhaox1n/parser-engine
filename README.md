@@ -1,2 +1,2 @@
 # parser-engine
-An sql parser module for database
+An sql parser module for database.

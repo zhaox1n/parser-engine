@@ -18,7 +18,6 @@
 package org.github.zhaox1n.parser.mysql.visitor;
 
 import org.github.zhaox1n.parser.api.visitor.SQLVisitorFacade;
-import com.cityos.dmg.parser.mysql.visitor.impl.*;
 import org.github.zhaox1n.parser.api.visitor.statement.*;
 import org.github.zhaox1n.parser.mysql.visitor.impl.*;
 

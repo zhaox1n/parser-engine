@@ -17,7 +17,6 @@
 
 package org.github.zhaox1n.parser.api.visitor;
 
-import com.cityos.dmg.parser.api.visitor.statement.*;
 import org.github.zhaox1n.parser.api.visitor.statement.*;
 
 /**
