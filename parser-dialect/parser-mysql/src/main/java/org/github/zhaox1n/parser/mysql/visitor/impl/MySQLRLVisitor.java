@@ -19,6 +19,7 @@ package org.github.zhaox1n.parser.mysql.visitor.impl;
 
 import org.github.zhaox1n.parser.api.ASTNode;
 import org.github.zhaox1n.parser.api.visitor.statement.RLVisitor;
+import org.github.zhaox1n.parser.autogen.MySQLStatementParser;
 import org.github.zhaox1n.parser.autogen.MySQLStatementParser.ChangeMasterToContext;
 import org.github.zhaox1n.parser.autogen.MySQLStatementParser.StartSlaveContext;
 import org.github.zhaox1n.parser.autogen.MySQLStatementParser.StopSlaveContext;
@@ -31,7 +32,12 @@ import org.github.zhaox1n.parser.statement.rl.StopSlaveStatement;
  * RL visitor for MySQL.
  */
 public final class MySQLRLVisitor extends MySQLVisitor implements RLVisitor {
-    
+
+    @Override
+    public ASTNode visitRlStatement(final MySQLStatementParser.RlStatementContext ctx) {
+        return visitChildren(ctx);
+    }
+
     @Override public ASTNode visitChangeMasterTo(final ChangeMasterToContext ctx) {
         return new ChangeMasterStatement();
     }

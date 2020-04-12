@@ -30,7 +30,12 @@ import java.util.Optional;
  * DCL visitor for MySQL.
  */
 public final class MySQLDCLVisitor extends MySQLVisitor implements DCLVisitor {
-    
+
+    @Override
+    public ASTNode visitDclStatement(final DclStatementContext ctx) {
+        return visitChildren(ctx);
+    }
+
     @Override
     public ASTNode visitGrant(final GrantContext ctx) {
         GrantStatement result = new GrantStatement();

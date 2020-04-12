@@ -19,6 +19,10 @@ grammar RLStatement;
 
 import Symbol, Keyword, MySQLKeyword, Literals, BaseRule;
 
+rlStatement
+    : (changeMasterTo | startSlave stopSlave)
+    ;
+
 changeMasterTo
     : CHANGE MASTER TO (identifier EQ_ (identifier | ignoredIdentifiers_))+  (FOR CHANNEL identifier)?
     ;

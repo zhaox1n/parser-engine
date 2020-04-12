@@ -20,9 +20,15 @@ grammar DDLStatement;
 import Symbol, Keyword, MySQLKeyword, Literals, BaseRule, DMLStatement;
 
 ddlStatement
-    : (createTable | alterTable | dropTable | dropIndex
-    | truncateTable | createIndex | createDatabase )
+    : (createTable | alterTable | dropTable | truncateTable
+    | createIndex | dropIndex
+    | createDatabase | alterDatabase | dropDatabase
+    | createEvent | alterEvent | dropEvent
+    | createFunction | alterFunction | dropFunction
+    | createProcedure | alterProcedure | dropProcedure
+    | createView | alterView | dropView)
     ;
+
 createTable
     : CREATE createTableSpecification_? TABLE tableNotExistClause_ tableName (createDefinitionClause | createLikeClause)
     ;

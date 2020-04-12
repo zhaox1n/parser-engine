@@ -19,6 +19,11 @@ grammar TCLStatement;
 
 import Symbol, Keyword, MySQLKeyword, Literals, BaseRule;
 
+tclStatement
+    : (setTransaction | beginTransaction | setAutoCommit
+    | commit | rollback | savepoint)
+    ;
+
 setTransaction
     : SET scope_? TRANSACTION
     ;

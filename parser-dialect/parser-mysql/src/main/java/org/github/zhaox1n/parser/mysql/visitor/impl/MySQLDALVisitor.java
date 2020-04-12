@@ -36,6 +36,11 @@ import org.github.zhaox1n.parser.value.literal.impl.StringLiteralValue;
  * DAL visitor for MySQL.
  */
 public final class MySQLDALVisitor extends MySQLVisitor implements DALVisitor {
+
+    @Override
+    public ASTNode visitDalStatement(final DalStatementContext ctx) {
+        return visitChildren(ctx);
+    }
     
     @Override
     public ASTNode visitUninstallPlugin(final UninstallPluginContext ctx) {

@@ -20,52 +20,7 @@ grammar MySQLStatement;
 import Symbol, Comments, DMLStatement, DDLStatement, TCLStatement, DCLStatement, DALStatement, RLStatement;
 
 execute
-    : (select
-    | insert
-    | update
-    | delete
-    | replace
-    | createDatabase
-    | alterDatabase
-    | createTable
-    | alterTable
-    | repairTable
-    | renameTableSpecification
-    | dropTable
-    | dropDatabase
-    | truncateTable
-    | createIndex
-    | dropIndex
-    | setTransaction
-    | beginTransaction
-    | setAutoCommit
-    | commit
-    | rollback
-    | savepoint
-    | grant
-    | revoke
-    | createUser
-    | dropUser
-    | alterUser
-    | renameUser
-    | createRole
-    | dropRole
-    | setDefaultRole
-    | setRole
-    | setPassword
-    | use
-    | desc
-    | showDatabases
-    | showTables
-    | showTableStatus
-    | showColumns
-    | showIndex
-    | showCreateTable
-    | showOther
-    | setVariable
-    | call
-    | changeMasterTo
-    | startSlave
-    | stopSlave
+    : ( dalStatement | dclStatement | ddlStatement | dmlStatement | rlStatement
+    | tclStatement
     ) SEMI_?
     ;

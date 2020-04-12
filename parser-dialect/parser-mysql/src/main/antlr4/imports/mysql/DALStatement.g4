@@ -19,6 +19,14 @@ grammar DALStatement;
 
 import Symbol, Keyword, MySQLKeyword, Literals, BaseRule;
 
+dalStatement
+    : (use | desc | showDatabases | showTables
+    | showTableStatus | showColumns | showIndex | showCreateTable
+    | showOther | setVariable)
+    ;
+
+
+
 use
     : USE schemaName
     ;

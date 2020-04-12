@@ -50,7 +50,12 @@ import java.util.LinkedList;
  * DDL visitor for MySQL.
  */
 public final class MySQLDDLVisitor extends MySQLVisitor implements DDLVisitor {
-    
+
+    @Override
+    public ASTNode visitDdlStatement(final DdlStatementContext ctx) {
+        return visitChildren(ctx);
+    }
+
     @Override
     public ASTNode visitCreateView(final CreateViewContext ctx) {
         return new CreateViewStatement();
@@ -63,7 +68,6 @@ public final class MySQLDDLVisitor extends MySQLVisitor implements DDLVisitor {
     
     @Override
     public ASTNode visitCreateDatabase(final CreateDatabaseContext ctx) {
-        System.out.println("test");
         CreateDatabaseStatement result = new CreateDatabaseStatement((SimpleDatabaseSegment) visit(ctx.schemaName()));
         return result;
     }

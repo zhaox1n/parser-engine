@@ -67,7 +67,12 @@ import java.util.List;
  * DML visitor for MySQL.
  */
 public final class MySQLDMLVisitor extends MySQLVisitor implements DMLVisitor {
-    
+
+    @Override
+    public ASTNode visitDmlStatement(final DmlStatementContext ctx) {
+        return visitChildren(ctx);
+    }
+
     @Override
     public ASTNode visitCall(final CallContext ctx) {
         return new CallStatement();

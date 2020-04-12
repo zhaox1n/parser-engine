@@ -28,7 +28,12 @@ import org.github.zhaox1n.parser.statement.tcl.*;
  * TCL visitor for MySQL.
  */
 public final class MySQLTCLVisitor extends MySQLVisitor implements TCLVisitor {
-    
+
+    @Override
+    public ASTNode visitTclStatement(final TclStatementContext ctx) {
+        return visitChildren(ctx);
+    }
+
     @Override
     public ASTNode visitSetTransaction(final SetTransactionContext ctx) {
         return new SetTransactionStatement();

@@ -19,6 +19,12 @@ grammar DCLStatement;
 
 import Symbol, Keyword, MySQLKeyword, Literals, BaseRule;
 
+dclStatement
+    :(grant | revoke | createUser | alterUser
+      | dropUser | renameUser | createRole | dropRole
+      | setDefaultRole | setRole | setPassword)
+    ;
+
 grant
     : GRANT (proxyClause_ | privilegeClause | roleClause_)
     ;

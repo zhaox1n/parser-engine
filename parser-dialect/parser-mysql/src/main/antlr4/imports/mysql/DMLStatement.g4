@@ -19,6 +19,10 @@ grammar DMLStatement;
 
 import Symbol, Keyword, MySQLKeyword, Literals, BaseRule;
 
+dmlStatement
+    : (insert | update | select | delete | replace | call)
+    ;
+
 insert
     : INSERT insertSpecification_ INTO? tableName partitionNames_? (insertValuesClause | setAssignmentsClause | insertSelectClause) onDuplicateKeyClause?
     ;
