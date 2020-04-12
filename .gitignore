@@ -1,0 +1,17 @@
+build
+build-eclipse
+.arc_jira_lib
+.classpath*
+.externalToolBuilders
+.project
+.settings
+.factorypath
+*.launch
+*~
+.idea
+*.iml
+*.ipr
+*.iws
+*.swp
+target/
+.DS_Store
