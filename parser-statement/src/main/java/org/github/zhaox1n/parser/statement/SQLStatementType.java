@@ -21,6 +21,5 @@ package org.github.zhaox1n.parser.statement;
  * SQL statement type.
  */
 public enum SQLStatementType {
-    
     DML, DDL, TCL, DCL, DAL, RL
 }

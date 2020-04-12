@@ -14,6 +14,7 @@
         <module>parser-load</module>
         <module>parser-statement</module>
         <module>parser-dialect</module>
+        <module>parser-sql-test</module>
     </modules>
 
 
